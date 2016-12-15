@@ -4,16 +4,10 @@
 
 ;; Define package repositories
 (require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-             '("tromey" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
+(setq 
+ package-archives 
+ '(("gnu" . "http://elpa.gnu.org/packages/")
+   ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
 
 
 ;; Load and activate emacs packages. Do this first so that the
@@ -123,6 +117,8 @@
 
 ;; Hard-to-categorize customizations
 (load "misc.el")
+
+(load "commands.el")
 
 ;; For editing lisps
 (load "elisp-editing.el")
